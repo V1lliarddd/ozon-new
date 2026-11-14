@@ -28,23 +28,10 @@ export class InputController {
       },
       {
         onInput: (event) => {
-          const raw = event.target.value;
-
-          if (raw === '') {
-            this.progress.setProgress(0);
-            return;
-          }
-
           const value = parseInt(event.target.value, 10);
-          if (Number.isNaN(value)) return;
-
-          const clamp = Math.min(100, Math.max(0, value));
-
-          if (clamp !== value) {
-            event.target.value = clamp;
-          }
-
-          this.progress.setProgress(clamp);
+          const clampedValue = Math.min(100, Math.max(0, value));
+          event.target.value = clampedValue;
+          this.progress.setProgress(clampedValue);
         }
       }
     );
