@@ -6,6 +6,8 @@
   border-radius: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .checkbox::before {

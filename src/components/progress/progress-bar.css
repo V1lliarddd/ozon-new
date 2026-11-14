@@ -14,12 +14,13 @@
     visibility 0s linear 0.25s;
 }
 
-.progress-rotating svg {
+.progress-bar svg {
   animation: rotate linear infinite;
+  animation-play-state: paused;
 }
 
-.progress-paused svg {
-  animation-play-state: paused;
+.progress-running svg {
+  animation-play-state: running;
 }
 
 @keyframes rotate {

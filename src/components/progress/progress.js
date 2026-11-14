@@ -69,9 +69,7 @@ export class ProgressBar {
   }
 
   #toggleRotationAnimation(shouldRotate) {
-    this.element.classList.toggle('progress-rotating', shouldRotate);
-    this.element.classList.toggle('progress-paused', !shouldRotate);
-
+    this.element.classList.toggle('progress-running', shouldRotate);
     if (shouldRotate && this.progressSVG) {
       this.progressSVG.style.animationDuration = `${this.options.rotationSpeed}s`;
     }

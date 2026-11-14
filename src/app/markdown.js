@@ -1,6 +1,8 @@
 export class MainMarkdown {
   init() {
-    return this.#initHeader() + this.#initMain();
+    const template = document.createElement('template');
+    template.innerHTML = this.#initHeader() + this.#initMain();
+    return template.content;
   }
 
   #initHeader() {
@@ -10,14 +12,14 @@ export class MainMarkdown {
   }
 
   #initControl(label, id) {
-    return `<div class="controlItem">
+    return `<div class="input-item">
           <div id="${id}"></div>
-          <span class="controlItemText">${label}</span>
+          <span class="input-item-label">${label}</span>
         </div>`;
   }
 
   #initMain() {
-    return `<main class="progress-bar">
+    return `<main class="progress-layout">
       <div
         class="progress-bar-container"
         id="progress-bar-container"

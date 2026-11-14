@@ -5,6 +5,8 @@
   height: 28px;
   cursor: pointer;
   text-align: center;
+  -moz-appearance: textfield;
+  appearance: textfield;
   font-size: 13px;
 }
 

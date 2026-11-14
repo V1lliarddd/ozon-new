@@ -1,14 +1,11 @@
-import { Controller } from '../controllers/controller.js';
-import { ProgressController } from '../controllers/progress.js';
+import { InputController } from '../controllers/input-controller/input-controller.js';
+import { ProgressController } from '../controllers/progress-controller/progress-controller.js';
 import { MainMarkdown } from './markdown.js';
 
 export default class App {
   constructor() {
-    this.root = document.body;
-    this.mainMarkdown = new MainMarkdown();
-    const template = document.createElement('template');
-    template.innerHTML = this.mainMarkdown.init();
-    this.root.appendChild(template.content);
+    this.container = new MainMarkdown().init();
+    document.body.appendChild(this.container);
 
     this.progressContainer = document.getElementById('progress-bar-container');
     this.inputContainer = document.getElementById('input-value-container');
@@ -27,11 +24,11 @@ export default class App {
   }
 
   #initController() {
-    this.controller = new Controller({
-      inputContainer: this.inputContainer,
+    this.controller = new InputController({
+      valueContainer: this.inputContainer,
       animateContainer: this.animateContainer,
       hideContainer: this.hideContainer,
-      progressBar: this.progressBar.getProgressBar()
+      progressBar: this.progressBar.getElement()
     });
 
     this.controller.init();

@@ -37,7 +37,7 @@ export const initProgressBarMarkup = ({
   radius
 }) => {
   return `
-    <div class="progress-bar-container">
+    <div class="progress-bar-svg">
       <svg width="${diameter}" height="${diameter}" viewBox="0 0 ${diameter} ${diameter}">
         ${initProgressBarBG({ strokeWidth, backgroundColor, center, radius })}
         ${initProgressBarSpotlight({ center, radius, strokeWidth, color: progressColor })}

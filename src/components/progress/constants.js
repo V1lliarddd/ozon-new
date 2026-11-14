@@ -14,7 +14,7 @@ export const DEFAULT_PROGRESS_ATTRIBUTES = {
   animate: false,
   hide: false,
   strokeWidth: 10,
-  radius: 40,
+  radius: 60,
   rotationSpeed: 2,
   backgroundColor: '#f7f7f7',
   progressColor: '#0000ff'
