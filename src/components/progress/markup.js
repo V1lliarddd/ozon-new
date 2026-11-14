@@ -1,11 +1,11 @@
-const initProgressBarBG = ({
+const initProgressBackground = ({
   strokeWidth,
   backgroundColor,
   center,
   radius
 }) => {
   return `<circle
-          class="progress-bar-bg"
+          class="progress-bg"
           cx="${center}"
           cy="${center}"
           r="${radius}"
@@ -15,9 +15,9 @@ const initProgressBarBG = ({
         ></circle>`;
 };
 
-const initProgressBarSpotlight = ({ center, radius, strokeWidth, color }) => {
+const initProgressSpotlight = ({ center, radius, strokeWidth, color }) => {
   return `<circle
-          class="progress-bar-spotlight"
+          class="progress-spotlight"
           cx="${center}"
           cy="${center}"
           r="${radius}"
@@ -28,7 +28,7 @@ const initProgressBarSpotlight = ({ center, radius, strokeWidth, color }) => {
         ></circle>`;
 };
 
-export const initProgressBarMarkup = ({
+export const initProgressMarkup = ({
   diameter,
   strokeWidth,
   backgroundColor,
@@ -37,10 +37,10 @@ export const initProgressBarMarkup = ({
   radius
 }) => {
   return `
-    <div class="progress-bar-svg">
+    <div class="progress-svg">
       <svg width="${diameter}" height="${diameter}" viewBox="0 0 ${diameter} ${diameter}">
-        ${initProgressBarBG({ strokeWidth, backgroundColor, center, radius })}
-        ${initProgressBarSpotlight({ center, radius, strokeWidth, color: progressColor })}
+        ${initProgressBackground({ strokeWidth, backgroundColor, center, radius })}
+        ${initProgressSpotlight({ center, radius, strokeWidth, color: progressColor })}
       </svg>
     </div>
   `;

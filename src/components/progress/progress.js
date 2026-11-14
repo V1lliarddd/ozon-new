@@ -1,15 +1,15 @@
-import { initProgressBarMarkup } from './markup.js';
+import { initProgressMarkup } from './markup.js';
 
 import {
   DEFAULT_PROGRESS_ATTRIBUTES,
   MIN_PROGRESS,
   MAX_PROGRESS,
-  FULL_CIRCLE,
   STROKE_TRANSITION,
   NO_TRANSITION
 } from './constants.js';
+import { getGeometry } from '../../utils/getGeometry.js';
 
-export class ProgressBar {
+export class Progress {
   constructor(options = {}) {
     this.options = {
       ...DEFAULT_PROGRESS_ATTRIBUTES,
@@ -20,7 +20,7 @@ export class ProgressBar {
 
   #init() {
     this.element = document.createElement('div');
-    this.element.classList.add('progress-bar');
+    this.element.classList.add('progress');
 
     this.#render();
     this.setVisibility(!this.options.hide);
@@ -37,7 +37,7 @@ export class ProgressBar {
     const diameter = radius * 2 + strokeWidth * 2;
     const center = diameter / 2;
 
-    this.element.innerHTML = initProgressBarMarkup({
+    this.element.innerHTML = initProgressMarkup({
       diameter,
       strokeWidth,
       backgroundColor,
@@ -47,15 +47,12 @@ export class ProgressBar {
     });
 
     this.progressSVG = this.element.querySelector('svg');
-    this.spotlightCircle = this.element.querySelector(
-      '.progress-bar-spotlight'
-    );
+    this.spotlightCircle = this.element.querySelector('.progress-spotlight');
   }
 
   #updateProgress(value) {
     const clamp = Math.min(MAX_PROGRESS, Math.max(MIN_PROGRESS, value));
-    const length = FULL_CIRCLE * this.options.radius;
-    const offset = length * (1 - clamp / MAX_PROGRESS);
+    const { length, offset } = getGeometry(this.options.radius, clamp);
     this.#initUpdateProgressStyle(offset, length);
   }
 

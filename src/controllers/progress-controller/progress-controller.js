@@ -1,20 +1,20 @@
-import { ProgressBar } from '../../components/progress/progress.js';
+import { Progress } from '../../components/progress/progress.js';
 
 export class ProgressController {
   constructor({ container }) {
     this.container = container;
-    this.progressBar = undefined;
+    this.progress = undefined;
   }
 
   init() {
-    const progressBar = new ProgressBar({
+    const progress = new Progress({
       value: 25
     });
-    this.progressBar = progressBar;
-    this.container.appendChild(progressBar.getElement());
+    this.progress = progress;
+    this.container.appendChild(progress.getElement());
   }
 
   getElement() {
-    return this.progressBar;
+    return this.progress;
   }
 }

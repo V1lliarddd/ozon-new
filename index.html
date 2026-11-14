@@ -5,13 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="src/components/input/input.css" />
-    <link rel="stylesheet" href="src/components/progress/progress-bar.css" />
+    <link rel="stylesheet" href="src/components/progress/progress.css" />
     <link
       rel="stylesheet"
       href="src/components/switch-input/switch-input.css"
     />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <h1>Progress</h1>
+    </header>
+    <main class="progress-layout">
+      <div
+        class="progress-container"
+        id="progress-container"
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      ></div>
+
+      <div class="progress-controls">
+        <div class="input-item">
+          <div id="input-value-container"></div>
+          <span class="input-item-label">Value</span>
+        </div>
+        <div class="input-item">
+          <div id="input-animate-container"></div>
+          <span class="input-item-label">Animate</span>
+        </div>
+        <div class="input-item">
+          <div id="input-hide-container"></div>
+          <span class="input-item-label">Hide</span>
+        </div>
+      </div>
+    </main>
+  </body>
   <script type="module" src="script.js"></script>
 </html>

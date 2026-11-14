@@ -46,7 +46,7 @@ body {
   min-height: 0;
 }
 
-.progress-bar-controls {
+.progress-controls {
   display: flex;
   flex-direction: column;
   gap: var(--control-gap);

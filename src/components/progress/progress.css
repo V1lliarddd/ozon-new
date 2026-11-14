@@ -1,4 +1,4 @@
-.progress-bar {
+.progress {
   transition:
     opacity 0.2s ease-out,
     transform 0.2s ease-out;
@@ -14,7 +14,7 @@
     visibility 0s linear 0.25s;
 }
 
-.progress-bar svg {
+.progress svg {
   animation: rotate linear infinite;
   animation-play-state: paused;
 }

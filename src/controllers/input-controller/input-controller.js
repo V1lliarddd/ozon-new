@@ -2,16 +2,11 @@ import { Input } from '../../components/input/input.js';
 import { SwitchInput } from '../../components/switch-input/switch-input.js';
 
 export class InputController {
-  constructor({
-    valueContainer,
-    animateContainer,
-    hideContainer,
-    progressBar
-  }) {
+  constructor({ valueContainer, animateContainer, hideContainer, progress }) {
     this.valueContainer = valueContainer;
     this.animateContainer = animateContainer;
     this.hideContainer = hideContainer;
-    this.progressBar = progressBar;
+    this.progress = progress;
   }
 
   init() {
@@ -36,7 +31,7 @@ export class InputController {
           const raw = event.target.value;
 
           if (raw === '') {
-            this.progressBar.setProgress(0);
+            this.progress.setProgress(0);
             return;
           }
 
@@ -49,7 +44,7 @@ export class InputController {
             event.target.value = clamp;
           }
 
-          this.progressBar.setProgress(clamp);
+          this.progress.setProgress(clamp);
         }
       }
     );
@@ -62,7 +57,7 @@ export class InputController {
       },
       {
         onChange: (event) => {
-          this.progressBar.setStartAnimation(event.target.checked);
+          this.progress.setStartAnimation(event.target.checked);
         }
       }
     );
@@ -75,7 +70,7 @@ export class InputController {
       },
       {
         onChange: (event) => {
-          this.progressBar.setVisibility(!event.target.checked);
+          this.progress.setVisibility(!event.target.checked);
         }
       }
     );
