@@ -2,21 +2,12 @@
   border: 1px solid #000;
   border-radius: 16px;
   width: 45px;
-  height: 28px;
+  height: 30px;
   cursor: pointer;
   text-align: center;
-  -moz-appearance: textfield;
-  appearance: textfield;
-  font-size: 13px;
-}
-
-.input::-webkit-inner-spin-button,
-.input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+  font-size: 15px;
 }
 
 .input::placeholder {
-  font-size: 11px;
-  text-align: center;
+  font-size: 12px;
 }

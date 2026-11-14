@@ -50,6 +50,11 @@
 
 ### Кроме того, в компонентах есть методы, которые не используются в текущей реализации, но могут пригодиться при расширении функциональности или использовании в другом приложении
 
+## Lighthouse Tests
+
+- Mobile: 97 Performance, 93 Accessibility
+- Desktop: 100 Performance, 93 Accessibility
+
 ## GitHub Pages
 
 https://v1lliarddd.github.io/ozon-new/

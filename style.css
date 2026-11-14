@@ -32,6 +32,22 @@ body {
   color: var(--color-text);
 }
 
+.input::-webkit-inner-spin-button,
+.input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .header {
   padding: var(--header-offset) 20px 0;
 }
