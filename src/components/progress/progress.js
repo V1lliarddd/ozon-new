@@ -78,8 +78,10 @@ export class Progress {
   }
 
   setProgress(value) {
-    this.options.value = value;
-    this.#updateProgress(value);
+    if (!Number.isFinite(value)) return;
+    const clamped = Math.min(MAX_PROGRESS, Math.max(MIN_PROGRESS, value));
+    this.options.value = clamped;
+    this.#updateProgress(clamped);
   }
 
   setVisibility(isVisible) {
