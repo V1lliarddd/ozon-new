@@ -28,6 +28,10 @@ export class InputController {
       },
       {
         onInput: (event) => {
+          if (event.target.value === '') {
+            this.progress.setProgress(0);
+            return;
+          }
           const value = parseInt(event.target.value, 10);
           const clampedValue = Math.min(100, Math.max(0, value));
           event.target.value = clampedValue;
