@@ -50,3 +50,5 @@
 - STROKE_TRANSITION | строка | значение: 'stroke-dashoffset 0.5s ease' | готовое значение CSS-свойства transition для плавного изменения прогресса
 
 ## GitHub Pages
+
+https://v1lliarddd.github.io/ozon-new/
