@@ -52,8 +52,8 @@
 
 ## Lighthouse Tests
 
-- Mobile: 97 Performance, 93 Accessibility
-- Desktop: 100 Performance, 93 Accessibility
+- Mobile: 97 Performance, 100 Accessibility
+- Desktop: 100 Performance, 100 Accessibility
 
 ## GitHub Pages
 

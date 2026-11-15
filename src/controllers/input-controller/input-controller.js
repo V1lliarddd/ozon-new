@@ -24,7 +24,8 @@ export class InputController {
       {
         placeholder: '0 - 100',
         name: 'input-value',
-        value: 25
+        value: 25,
+        id: 'input-value'
       },
       {
         onInput: (event) => {
@@ -44,7 +45,8 @@ export class InputController {
   #initAnimateInput() {
     const animateInput = new SwitchInput(
       {
-        name: 'input-animate'
+        name: 'input-animate',
+        id: 'input-animate'
       },
       {
         onChange: (event) => {
@@ -57,7 +59,8 @@ export class InputController {
   #initHideInput() {
     const hideInput = new SwitchInput(
       {
-        name: 'input-hide'
+        name: 'input-hide',
+        id: 'input-hide'
       },
       {
         onChange: (event) => {
