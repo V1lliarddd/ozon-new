@@ -4,6 +4,15 @@
     transform 0.2s ease-out;
 }
 
+.progress svg {
+  animation: rotate linear infinite;
+  animation-play-state: paused;
+}
+
+.progress-running svg {
+  animation-play-state: running;
+}
+
 .hidden {
   opacity: 0;
   visibility: hidden;
@@ -12,15 +21,6 @@
     opacity 0.25s ease,
     transform 0.25s ease,
     visibility 0s linear 0.25s;
-}
-
-.progress svg {
-  animation: rotate linear infinite;
-  animation-play-state: paused;
-}
-
-.progress-running svg {
-  animation-play-state: running;
 }
 
 @keyframes rotate {
